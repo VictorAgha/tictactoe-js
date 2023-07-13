@@ -14,36 +14,38 @@
         <input type="text" id="player1">
         <label for="player2">Player 2 Name: </label>
         <input type="text" id="player2">
-        <button id="start">Start Game</button>
+        <button id="start" onclick="startGame()">Start Game</button>
     </div>
 
     <div class="score">
-        <p id="player1-score">Player 1 Score: 0</p>
-        <p id="player2-score">Player 2 Score: 0</p>
+        <p id="player1score">Player 1 Score: 0</p>
+        <p id="player2score">Player 2 Score: 0</p>
     </div>
 
     <div class = "column">
         <div class="row">
-            <input type="text" id= "b1" class="cell" readonly>
-            <input type="text" id= "b2" class="cell" readonly>
-            <input type="text" id= "b3" class="cell" readonly>
+            <input type="text" id= "b1" class="cell" readonly onclick="makeMove(0)">
+            <input type="text" id= "b2" class="cell" readonly onclick="makeMove(1)">
+            <input type="text" id= "b3" class="cell" readonly onclick="makeMove(2)">
         </div>
         <div class="row">
-            <input type="text" id= "b4" class="cell" readonly>
-            <input type="text" id= "b5" class="cell" readonly>
-            <input type="text" id= "b6" class="cell" readonly>
+            <input type="text" id= "b4" class="cell" readonly onclick="makeMove(3)">
+            <input type="text" id= "b5" class="cell" readonly onclick="makeMove(4)">
+            <input type="text" id= "b6" class="cell" readonly onclick="makeMove(5)">
         </div>
-        <div class="row">
-            <input type="text" id= "b7" class="cell" readonly>
-            <input type="text" id= "b8" class="cell" readonly>
-            <input type="text" id= "b9" class="cell" readonly>
+        <div class="row" >
+            <input type="text" id= "b7" class="cell" readonly onclick="makeMove(6)">
+            <input type="text" id= "b8" class="cell" readonly onclick="makeMove(7)">
+            <input type="text" id= "b9" class="cell" readonly onclick="makeMove(8)">
         </div>
     </div>
     
     <div>
-        <button id="reset">RESET</button>
+        <button id="reset" onclick="resetGame()">RESET</button>
         <p id="result"></p>
     </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
