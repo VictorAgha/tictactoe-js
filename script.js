@@ -45,8 +45,15 @@ function checkWin(player) {
         [0, 3, 6], [1, 4, 7], [2, 5, 8], 
         [0, 4, 8], [2, 4, 6] 
     ];
+    
     return winningCombos.some(combo => {
-        return combo.every(index => board[index] === player);
+        if (combo.every(index => board[index] === player)) {
+            combo.forEach(index => {
+                cells[index].classList.add('winner-animation');
+            });
+            return true;
+        }
+        return false;
     });
 }
 
